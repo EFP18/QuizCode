@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Quiz</title>
   <link rel="stylesheet" href="./Assets/css/style.css"/>
 </head>
 
@@ -36,62 +36,19 @@
     <!-- These are the questions that will be shown one by one -->
     <div id="quiz-buttons" style="display: none">
       <!-- Buttons that will be shown as possible answers -->
-      <button></button>
-      <button></button>
-      <button></button>
+      <button data-index="0"></button>
+      <button data-index="1"></button>
+      <button data-index="2"></button>
     </div>
+    <p id="user-note"></p>
     
     <p id="finished" hidden>You're done!</p>
+    <div>
+      <button id="submit-button" hidden>Submit</button>
+    </div>
+    <div id="highscores" hidden>High Scores</div>
+    
 
-
-
-
-  <!-- var startBtn = document.querySelector("#start-button");
-var startPage = document.querySelector(".start-page");
-var questionDisplay = document.querySelector("#question");
-var quizButtonContainer = document.querySelector("#quiz-buttons");
-var finishedP = document.querySelector("#finished");
-
-var timer = document.querySelector(".timer");
-var timeLeft = 60;
-var timeStart;
-
-var quizButtons = quizButtonContainer.querySelectorAll("buttons");
-     -->
-
-
-    <!-- <div class="container">
-      <div class="question-container" style="display: none">
-        <h2> class="title-questions"> Titles</h2>
-        <ul>
-          <li class="answer-choice-items"><button class="quiz-button" id="1"></button></li>
-          <li class="answer-choice-items"><button class="quiz-button" id="2"></button></li>
-          <li class="answer-choice-items"><button class="quiz-button" id="3"></button></li>
-          <li class="answer-choice-items"><button class="quiz-button" id="4"></button></li>
-          <li class="answer-choice-items"><button class="quiz-button" id="5"></button></li>
-        </ul>
-      </div> -->
-      
-
-      <!-- <p class="quiz-rules">Click here to start the quiz!</p> -->
-
-
-      <!-- <div class="start-page">
-        Click here to start the quiz!
-      </div>
-      <button class="start-quiz">Start Quiz!</button>
-      
-
-      <div class="questions-container">
-        <div class="show-questions">
-          question
-        
-        </div>
-      </div>
-      <p id="rightOrWrong"></p>
-
-    </div> -->
-  </main>
 </body>
 <script src="Assets/javascript/script.js"></script>
 </html>
