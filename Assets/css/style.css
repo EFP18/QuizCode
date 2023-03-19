@@ -38,6 +38,7 @@ li {
 #quiz-buttons {
   display: none;
   font-size: 30px;
+  text-align: center;
 }
 
 
@@ -47,5 +48,8 @@ li {
 
 #start-button {
   font-size: 20px;
+  text-align: center;
+  margin: auto;
+  width: 90%;
 
 }

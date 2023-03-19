@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <header>
+    <h1>High Scores</h1>
+    <h1 class="time-left"> Time: 60 sec.</h1>
+  </header>
+
+  <main>
+    <h1>Quiz</h1>
+
+    <p class="start-page"> 
+      Click here to test your knowledge about Greece!
+    </p>
+
+    <button class ="start-button">Start</button>
+
+    <section>
+
+      <div class = "questions">
+      </div>
+
+      <div class = "done" hidden>
+        You're done!
+        <p class = "score"></p>
+
+        <form class = "form-initials" >
+          <!-- action="/action_page.php" -->
+          <label for="initials">Initials</label><br>
+          <input type="text" id="initials" name="initials" value="Add your initials here:"><br><br>
+          <input class ="submit-button" type="submit" value="Submit">
+        </form> 
+
+      </div>
+
+      <div class = "highscores" hidden></div>
+    </section>
+  
+
+  </main>
+
+
+</body>
+<script src="./Assets/javascript/script-new.js"></script>
+
+</html>
+
+
+<!-- pseudo code -->
+
+<!-- 
+  1. i want a page with a nav bar that has highscores, home 
+  2. i want a button that says start quiz
+  3. when clicked, i want a timer to start counting and the first questions appearing
+  4. when the user gets an answer, it says if it's right or wrong
+  5. the timeleft after the user finishes the test is his score
+  6. after the questions end, i want the user to get his score and a place to add their initials
+  7. their initials and their score needs to be stored in a highscores board 
+  
+-->
