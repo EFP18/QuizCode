@@ -1,9 +1,30 @@
-* {
-  background-color: rgb(99, 194, 223);
+.home-page{
+  color:rgb(255, 255, 255);
+  font-family: 'Caesar Dressing', cursive;
 }
 
-.background {
-  background-image: url("../pexels-edouard-chassaigne-9323910.jpg");
+.highscores-page {
+  color: rgb(255, 255, 255);
+  font-family: 'Caesar Dressing', cursive;
+
+}
+
+.background-home {  
+  background-image: url("../beach-g3aba628e9_1920.jpg");
+  background-color: #cccccc; 
+  height: 500px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+}
+
+.background-highscores {  
+  background-image: url("../mountains-g874635601_1920.jpg");
+  background-color: #cccccc; 
+  height: 500px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
 }
 
 main{
@@ -13,10 +34,6 @@ main{
   font-size: 30px;
 }
 
-header {
-
-
-}
 
 main div button {
   margin-right: 20px;
@@ -33,4 +50,8 @@ main div button {
 
 label {
   font-size: 50px;
+}
+
+#to-highscores, #home-page:hover {
+  cursor: pointer;
 }

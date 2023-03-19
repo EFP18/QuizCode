@@ -4,15 +4,20 @@ var startBtn = document.querySelector(".start-button");
 var questionsEl = document.querySelector(".questions");
 var quizDone = document.querySelector(".done");
 var scoreEl = document.querySelector(".score");
-var formInitials = document.querySelector(".form-initials");
+// var formInitials = document.querySelector(".form-initials");
 var highscoresEl = document.querySelector(".highscores");
 var timeLeft = document.querySelector(".time-left");
+var highscoresPage = document.querySelector("#to-highscores");
 
 var time = 50;
 var timerInterval;
 var questionIndex = 0;
 // start at 0 so it defaults by starting at the 1st question of the array of questions
 var rightOrWrong = "";
+
+highscoresPage.addEventListener("click", function(){
+  location.href="highscores.html";
+})
 
 
 var questionsObj = [
@@ -139,25 +144,53 @@ function endGame() {
   console.log("quiz done")
   mainEl.innerHTML="";
 
+  
 
-  // form goes here
-  // local storage
+  var endGameMessage = document.createElement("h3");
+  endGameMessage.textContent = "Your score is: " +time;
+  mainEl.appendChild(endGameMessage);
 
   var divForm = document.createElement("div");
   divForm.setAttribute("class", "form");
   divForm.innerHTML = 
   `
   <form class = "form-initials" >
-    <!-- action="/action_page.php" -->
     <label for="initials">Initials</label><br>
     <input type="text" id="initials" name="initials" value="Add your initials here:"><br><br>
-    <button class ="submit-button" type="submit" value="Submit" formaction='highscores.html'>Submit</button>
+    <button id = "form-button" class ="submit-button" type="submit" value="Submit" formaction='highscores.html'>Submit</button>
   </form> 
 `
 
-mainEl.appendChild(divForm);
+  mainEl.appendChild(divForm);
+
+  var submitBtn = document.querySelector("#form-button");
+  submitBtn.addEventListener("click", function(){
+    saveScore();
+  })
+  return;
+}
+
+// create a local variable for highscores
+var localStorageHighScores = JSON.parse(localStorage.getItem("localStorageHighScores")) || [];
+
+// var score = localStorage.getItem("scoreEl", timeLeft);
+// console.log(score)
+function saveScore(){
+  var scoreTime = "";
+  var score = {
+    initials: initials.value,
+    scoreTime: time
+
+  }
+
+// push the results into the local variable
+  localStorageHighScores.push(score);
+
+  // store object in local storage and convert to string
+  localStorage.setItem("localStorageHighScores", JSON.stringify(localStorageHighScores));
+
 
 }
 
-
+saveScore();
 

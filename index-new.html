@@ -4,21 +4,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Quiz about Greece</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./Assets/css/style.css"/>
-
+  
 </head>
-<body>
+<body class="background-home home-page">
   
   <header>
     <nav>
-      <h1>High Scores</h1>
+      <h1>
+        <a id="to-highscores">
+          High Scores
+        </a>
+      </h1>
       <h2 class="time-left"> Time: 60 sec.</h2>
     </nav>
   </header>
 
   <main>
-    <div class="background"></div>
+    <div ></div>
     <h1>Quiz</h1>
 
     <p class="start-page"> 
@@ -32,15 +40,8 @@
       <div class = "questions">
       </div>
 
-      <div class = "done" hidden>
-        You're done!
-        <p class = "score"></p>
+      <p class = "score"></p>
 
-        
-
-      </div>
-
-      <div class = "highscores" hidden></div>
     </section>
   
 
@@ -53,15 +54,3 @@
 </html>
 
 
-<!-- pseudo code -->
-
-<!-- 
-  1. i want a page with a nav bar that has highscores, home 
-  2. i want a button that says start quiz
-  3. when clicked, i want a timer to start counting and the first questions appearing
-  4. when the user gets an answer, it says if it's right or wrong
-  5. the timeleft after the user finishes the test is his score
-  6. after the questions end, i want the user to get his score and a place to add their initials
-  7. their initials and their score needs to be stored in a highscores board 
-  
--->
