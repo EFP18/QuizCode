@@ -5,7 +5,6 @@ var questionsEl = document.querySelector(".questions");
 var quizDone = document.querySelector(".done");
 var scoreEl = document.querySelector(".score");
 var formInitials = document.querySelector(".form-initials");
-var submitBtn = document.querySelector(".submit-button");
 var highscoresEl = document.querySelector(".highscores");
 var timeLeft = document.querySelector(".time-left");
 
@@ -14,7 +13,6 @@ var timerInterval;
 var questionIndex = 0;
 // start at 0 so it defaults by starting at the 1st question of the array of questions
 var rightOrWrong = "";
-
 
 
 var questionsObj = [
@@ -57,7 +55,7 @@ function startQuiz(){
   console.log("quiz started");
 
 
-  var timerInterval = setInterval(function(){
+  timerInterval = setInterval(function(){
     time--;
     timeLeft.textContent = `Time left: ${time}` ;
     
@@ -74,7 +72,6 @@ function startQuiz(){
   }, 1000);
 
   displayQuestions();
-
 }
 
 startBtn.addEventListener("click", startQuiz);
@@ -131,27 +128,34 @@ if (questionIndex >= questionsObj.length) {
       buttonEl.setAttribute("data-index", i);
       btnDivEl.appendChild(buttonEl);
 
+      buttonEl.setAttribute("style", "font-size: 30px");
+
     }
-
-    
-
-
-  
   }
-
-
-
 
 
 function endGame() {
   clearInterval(timerInterval);
-  quizDone.hidden=false;
   console.log("quiz done")
+  mainEl.innerHTML="";
 
 
   // form goes here
   // local storage
 
+  var divForm = document.createElement("div");
+  divForm.setAttribute("class", "form");
+  divForm.innerHTML = 
+  `
+  <form class = "form-initials" >
+    <!-- action="/action_page.php" -->
+    <label for="initials">Initials</label><br>
+    <input type="text" id="initials" name="initials" value="Add your initials here:"><br><br>
+    <button class ="submit-button" type="submit" value="Submit" formaction='highscores.html'>Submit</button>
+  </form> 
+`
+
+mainEl.appendChild(divForm);
 
 }
 
