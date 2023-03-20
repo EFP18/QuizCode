@@ -3,7 +3,7 @@ var highscoresList = document.querySelector("#highscores-list");
 
 
 homeBtn.addEventListener("click", function(){
-  location.href="index-new.html";
+  location.href="index.html";
 })
 
 function displayHighScores(){

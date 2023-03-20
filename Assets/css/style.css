@@ -1,11 +1,24 @@
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 50px;
+}
+
+header {
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
 .home-page{
   color:rgb(255, 255, 255);
-  font-family: 'Caesar Dressing', cursive;
+  font-family: 'Edu NSW ACT Foundation', cursive;
 }
 
 .highscores-page {
   color: rgb(255, 255, 255);
-  font-family: 'Caesar Dressing', cursive;
+  font-family: 'Edu NSW ACT Foundation', cursive;
 
 }
 
@@ -32,19 +45,21 @@ main{
   align-items: center;
   flex-direction: column;
   font-size: 30px;
+  padding-top:100px;
+
 }
 
 
 main div button {
   margin-right: 20px;
-  font-size: 40px;
+  font-size: 20px;
+  cursor:pointer;
 }
 
 
-.start-button, .submit-button {
-  font-size: 20px;
-  text-align: center;
-  margin: auto;
+.start-button {
+  font-size: 30px;
+  cursor:pointer;
 
 }
 
@@ -55,3 +70,39 @@ label {
 #to-highscores, #home-page:hover {
   cursor: pointer;
 }
+
+
+@media screen and (max-width: 768px){
+  .background-highscores, .background-home {
+    max-height: 100%;
+  }
+
+  main{
+    padding: 20px;
+    padding-top:100px;
+  }
+
+  .questions {
+    font-size:100px;
+    color:red;
+  }
+
+
+}
+
+input {
+  height: 30px;
+  font-size: 20px;
+}
+
+#form-button {
+  font-size: 30px;
+  cursor:pointer;
+
+}
+
+label {
+  font-size: 40px;
+}
+
+
