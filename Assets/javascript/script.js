@@ -58,8 +58,10 @@ function startQuiz(){
   timerInterval = setInterval(function(){
     time--;
     if (time<0){
-      time==0;
-      console.log(time)
+      time=0;
+      clearInterval(timerInterval);
+      endGame();
+      return;
     }
     timeLeft.textContent = `Time left: ${time}` ;
     
@@ -151,7 +153,7 @@ function endGame() {
   `
   <form class = "form-initials" >
     <label for="initials">Initials</label><br>
-    <input type="text" id="initials" name="initials" value="Add your initials here:"><br><br>
+    <input type="text" id="initials" name="initials" value="Add your initials here"><br><br>
     <button id = "form-button" class ="submit-button" type="submit" value="Submit" formaction='highscores.html'>Submit</button>
   </form> 
 `
