@@ -82,12 +82,9 @@ label {
     padding-top:100px;
   }
 
-  .questions {
-    font-size:100px;
-    color:red;
+  main h1 {
+    font-size: 2rem;
   }
-
-
 }
 
 input {

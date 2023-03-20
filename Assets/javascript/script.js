@@ -4,7 +4,7 @@ var startBtn = document.querySelector(".start-button");
 var timeLeft = document.querySelector(".time-left");
 var highscoresPage = document.querySelector("#to-highscores");
 
-var time = 60;
+var time = 20;
 var timerInterval;
 var questionIndex = 0;
 // start at 0 so it defaults by starting at the 1st question of the array of questions
@@ -57,18 +57,18 @@ function startQuiz(){
 
   timerInterval = setInterval(function(){
     time--;
+    if (time<0){
+      time==0;
+      console.log(time)
+    }
     timeLeft.textContent = `Time left: ${time}` ;
     
     if (time <= 0){
       clearInterval(timerInterval);
-      // print time is up score=0
       endGame();
       return;
     } 
-    // stop the timer if it reaches 0
-    
-    // if all questions answered, clear interval
-
+      
   }, 1000);
 
   displayQuestions();
@@ -185,5 +185,4 @@ function saveScore(){
 
 }
 
-saveScore();
 
