@@ -153,7 +153,7 @@ function endGame() {
   `
   <form class = "form-initials" >
     <label for="initials">Initials</label><br>
-    <input type="text" id="initials" name="initials" value="Add your initials here"><br><br>
+    <input type="text" id="initials" name="initials" placeholder="Add your initials here"><br><br>
     <button id = "form-button" class ="submit-button" type="submit" value="Submit" formaction='highscores.html'>Submit</button>
   </form> 
 `
