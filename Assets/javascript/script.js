@@ -4,7 +4,7 @@ var startBtn = document.querySelector(".start-button");
 var timeLeft = document.querySelector(".time-left");
 var highscoresPage = document.querySelector("#to-highscores");
 
-var time = 20;
+var time = 60;
 var timerInterval;
 var questionIndex = 0;
 // start at 0 so it defaults by starting at the 1st question of the array of questions
